@@ -5,14 +5,9 @@
     <th>Name</th>
     <th>Uri</th>
   </tr>
-  <tr>
-    <td data-th="Id">1</td>
-    <td data-th="Name">Metallica</td>
-    <td data-th="Uri">http://www.metallica.com</td>
-  </tr>
   <tr *ngFor="let artist of artists">
-    <td data-th="Id">{{ artist.Id }}</td>
-    <td data-th="Name">{{ artist.Name }}</td>
-    <td data-th="Uri">{{ artist.Uri }}</td>
+    <td data-th="Id">{{ artist.id }}</td>
+    <td data-th="Name">{{ artist.name }}</td>
+    <td data-th="Uri">{{ artist.uri }}</td>
   </tr>
 </table>

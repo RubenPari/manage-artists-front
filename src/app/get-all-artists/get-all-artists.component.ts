@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import IArtist from './artist.interface';
+import Artist from './artist.model';
 import { GetAllArtistsService } from './get-all-artists.service';
 
 @Component({
@@ -8,12 +8,13 @@ import { GetAllArtistsService } from './get-all-artists.service';
   styleUrls: ['./get-all-artists.component.scss'],
 })
 export class GetAllArtistsComponent implements OnInit {
-  artists: IArtist[] = [];
+  artists: Artist[] = [];
 
   constructor(private getAllArtistsService: GetAllArtistsService) {}
 
   getAllArtists() {
     this.getAllArtistsService.getAllArtists().subscribe((artists) => {
+      console.log(artists);
       this.artists = artists;
     });
   }
