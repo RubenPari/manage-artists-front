@@ -5,17 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { SyncPlaylistComponent } from '../sync-playlist/sync-playlist.component';
-import { GetAllArtistsComponent } from "../artist-module/get-all/get-all-artists.component";
-import { AddArtistComponent } from "../artist-module/add/add-artist.component";
+import { ArtistComponent } from '../artist/artist.component';
+import { ArtistsListComponent } from '../artists-list/artists-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    GetAllArtistsComponent,
-    AddArtistComponent,
-    SyncPlaylistComponent,
+    ArtistComponent,
+    ArtistsListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
