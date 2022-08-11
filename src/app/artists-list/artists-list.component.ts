@@ -13,7 +13,9 @@ export class ArtistsListComponent implements OnInit {
   @Input() artists!: Artist[];
 
   getAllArtists(): void {
-    this.artists = this.artistsListService.getAllArtists();
+    this.artistsListService.getAllArtists().subscribe((artists) => {
+      this.artists = artists;
+    });
   }
 
   ngOnInit(): void {
