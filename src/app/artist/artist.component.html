@@ -1,8 +1,23 @@
-<div class="card" style="width: 18rem">
-  <img class="card-img-top" src="{{ artist.imgSrc }}" alt="Card image cap" />
-  <div class="card-body">
-    <p class="card-text">
-      {{ artist.description }}
-    </p>
+<div class="m-5">
+  <div class="card" style="max-width: 400px; margin: 0 auto">
+    <div class="banner">
+      <img class="card-img-top" src="{{ artist.imgSrc }}" />
+    </div>
+    <h2 style="margin-top: 20px; margin-left: 20px" class="name">
+      {{ artist.name }}
+    </h2>
+    <div class="title" style="margin-left: 20px; margin-bottom: 5px;">
+      {{ artist.description}}
+    </div>
+    <div class="actions">
+      <div class="follow-btn">
+        <a
+          style="width: 100%"
+          class="p-2 btn btn-warning fill"
+          href="{{ artist.uri }}"
+          >Listen now!</a
+        >
+      </div>
+    </div>
   </div>
 </div>
