@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import Artist from 'src/app/models/artist.model';
 import { environment } from 'src/environments/environment';
-import Artist from '../models/artist.model';
 
 @Injectable({
   providedIn: 'root',
