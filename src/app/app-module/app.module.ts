@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { ArtistComponent } from '../artist/artist.component';
-import { ArtistsListComponent } from '../artists-list/artists-list.component';
+import { ArtistsListComponent } from '../artist-module/artists-list/artists-list.component';
+import { ArtistComponent } from '../artist-module/artist/artist.component';
+import { AddDescriptionComponent } from '../add-description/add-description.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ArtistsListComponent } from '../artists-list/artists-list.component';
     NavbarComponent,
     ArtistComponent,
     ArtistsListComponent,
+    AddDescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
