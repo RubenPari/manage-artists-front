@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {catchError, Observable} from 'rxjs';
 import Artist from 'src/app/models/artist.model';
 import { environment } from 'src/environments/environment';
 
@@ -12,10 +12,15 @@ export class AddDescriptionService {
 
   constructor(private http: HttpClient) {}
 
-  setDescriptionForArtist(id: string, description: string) {
-    const request = this.http.post<Artist>(
+  setDescriptionForArtist(id: string, description: string): Observable<any> {
+    return this.http.post<Artist>(
       this.baseUrl + 'artists/set-description/' + id,
       { description: description }
-    );
+    ).pipe(
+      catchError((error) => {
+        console.log("Error to set description (POST request)" + error);
+        return error;
+      }
+    ));
   }
 }

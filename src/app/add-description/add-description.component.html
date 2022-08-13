@@ -1,1 +1,6 @@
-<div class="m-5">Hello World!</div>
+<form action="/" method="post">
+  <select name="dropdown">
+    <option *ngFor="let artist of artists" value="artist.id">{{artist.name}}</option>
+  </select>
+  <input type="submit" value="Submit"/>
+</form>
