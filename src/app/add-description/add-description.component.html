@@ -1,6 +1,6 @@
 <form action="/" method="post">
   <select name="dropdown">
-    <option *ngFor="let artist of artists" value="artist.id">{{artist.name}}</option>
+    <option *ngFor="let artist of artists" value="{{artist.id}}">{{artist.name}}</option>
   </select>
   <input type="submit" value="Submit"/>
 </form>
