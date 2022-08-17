@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ArtistsListService} from '../artist-module/artists-list/artists-list.service';
 import {AddDescriptionService} from "./add-description.service";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'add-description',
@@ -13,6 +14,7 @@ export class AddDescriptionComponent implements OnInit {
   }
 
   artists!: any[];
+  baseUrl = environment.apiUrl;
 
   getAllArtists(): void {
     this.artistsListService.getAllArtists().subscribe((artists) => {

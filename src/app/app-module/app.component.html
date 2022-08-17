@@ -13,14 +13,20 @@
     <title></title>
   </head>
   <body>
-    <!-- NAVBAR component -->
     <app-navbar></app-navbar>
 
-    <h1 class="page-header page header-primary">
-      Welcome the Manage artists application!
-    </h1>
+    <!-- h1 centered -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">
+            Welcome to Manage artists application
+          </h1>
+        </div>
+      </div>
+    </div>
 
-    <artists-list></artists-list>
+    <router-outlet></router-outlet>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
