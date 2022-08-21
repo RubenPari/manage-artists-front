@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import Artist from 'src/app/models/artist.model';
-import { ArtistsListService } from './artists-list.service';
+import { ArtistsService } from '../artists.service';
 
 @Component({
   selector: 'artists-list',
@@ -8,12 +8,12 @@ import { ArtistsListService } from './artists-list.service';
   styleUrls: ['./artists-list.component.scss'],
 })
 export class ArtistsListComponent implements OnInit {
-  constructor(private artistsListService: ArtistsListService) {}
+  constructor(private artistsService: ArtistsService) {}
 
   @Input() artists!: Artist[];
 
   getAllArtists(): void {
-    this.artistsListService.getAllArtists().subscribe((artists) => {
+    this.artistsService.getAll().subscribe((artists) => {
       this.artists = artists;
     });
   }
