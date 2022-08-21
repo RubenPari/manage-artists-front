@@ -8,6 +8,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { ArtistsListComponent } from '../artist-module/artists-list/artists-list.component';
 import { ArtistComponent } from '../artist-module/artist/artist.component';
 import { AddDescriptionComponent } from '../add-description/add-description.component';
+import { AddArtistComponent } from '../artist-module/add-artist/add-artist.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AddDescriptionComponent } from '../add-description/add-description.comp
     NavbarComponent,
     ArtistComponent,
     ArtistsListComponent,
+    AddArtistComponent,
     AddDescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
