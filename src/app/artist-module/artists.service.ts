@@ -17,7 +17,7 @@ export class ArtistsService {
   }
 
   add(name: string): Observable<any> {
-    return this.http.post(this.baseUrl + '/artists?name=' + name, {});
+    return this.http.post(this.baseUrl + '/artists/add?name=' + name, {});
   }
 
   delete(id: number): Observable<any> {

@@ -9,6 +9,7 @@ import { ArtistsListComponent } from '../artist-module/artists-list/artists-list
 import { ArtistComponent } from '../artist-module/artist/artist.component';
 import { AddDescriptionComponent } from '../add-description/add-description.component';
 import { AddArtistComponent } from '../artist-module/add-artist/add-artist.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { AddArtistComponent } from '../artist-module/add-artist/add-artist.compo
     AddArtistComponent,
     AddDescriptionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

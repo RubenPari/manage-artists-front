@@ -7,13 +7,15 @@ import { ArtistsService } from '../artists.service';
   styleUrls: ['./add-artist.component.scss'],
 })
 export class AddArtistComponent implements OnInit {
+  name: string = '';
   @Input() response: string | undefined;
 
   constructor(private artistsService: ArtistsService) {}
+
   ngOnInit(): void {}
 
-  addArtist(name: string): void {
-    const added = this.artistsService.add(name);
+  addArtist(): void {
+    const added = this.artistsService.add(this.name);
 
     added.subscribe((response) => {
       if (response.status == 'ok') {
