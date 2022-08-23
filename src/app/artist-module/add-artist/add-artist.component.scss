@@ -1,46 +1,53 @@
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+html {
+  background: linear-gradient(90deg, #00c6ff 10%, #0072ff 90%);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+}
+
+.body {
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.wrapper {
+  text-align: center;
+  position: relative;
+  height: 80px;
+  font-size: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .search {
-  width: 100%;
-  position: relative;
-  display: flex;
+  padding: 0 30px;
+  font-size: 18px;
+  width: 60%;
+  max-width: 400px;
+  height: 80px;
+  border: 1px solid darken(white, 30%);
+  border-radius: 20px 0 0 20px;
 }
 
-.searchTerm {
-  width: 100%;
-  border: 3px solid yellow;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #d7ff27;
-}
-
-.searchTerm:focus{
-  color: #2b2d2e;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #2b2d2e;
-  background: #2b2d2e;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
+.submit {
   cursor: pointer;
-  font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border: none;
+  background: url("http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png")
+      no-repeat center center,
+    yellow;
+  background-size: 35px 35px;
+  border-radius: 0 20px 20px 0;
+  background-image: url("https://openclipart.org/image/2400px/svg_to_png/213239/Search-icon.png");
+  padding: 15px 25px;
+  display: inline-block;
+  width: 150px;
+  height: 80px;
 }

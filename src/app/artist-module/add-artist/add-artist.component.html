@@ -1,14 +1,9 @@
 <div class="wrap">
-  <div class="search">
-    <input
-      type="text"
-      class="searchTerm"
-      placeholder="Search your favourite artist!"
-      [(ngModel)]="name"
-    />
-    <button type="submit" (click)="addArtist()">
-      <i class="fa fa-search"></i>
-    </button>
+  <div class="body">
+    <div class="wrapper">
+      <input class="search" type="text" [(ngModel)]="name" />
+      <input class="submit" (click)="addArtist()" />
+    </div>
   </div>
   <h2>
     {{ response }}
