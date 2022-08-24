@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistsService } from '../artist-module/artists.service';
-import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'add-description',
@@ -11,7 +10,8 @@ export class AddDescriptionComponent implements OnInit {
   constructor(private artistsService: ArtistsService) {}
 
   artists!: any[];
-  baseUrl = environment.apiUrl;
+  idSelect: string = '';
+  description: string = '';
 
   getAllArtists(): void {
     this.artistsService.getAll().subscribe((artists) => {
@@ -25,12 +25,11 @@ export class AddDescriptionComponent implements OnInit {
     });
   }
 
-  setDescriptionForArtist(data: any): void {
+  setDescriptionForArtist(): void {
     this.artistsService
-      .setDescriptionForArtist(data.id, data.description)
-      .subscribe((artist) => {
-        console.log('Artist with id ' + data.id + ' has been updated');
-        console.log(artist);
+      .setDescriptionForArtist(this.idSelect, this.description)
+      .subscribe(() => {
+        console.log('Artist has been updated');
       });
   }
 

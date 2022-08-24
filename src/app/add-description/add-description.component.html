@@ -1,6 +1,11 @@
-<form action="{{ baseUrl }}/artists/set-description" method="post">
-  <select name="dropdown">
-    <option *ngFor="let artist of artists" value="{{ artist.id }}">{{ artist.name }}</option>
-  </select>
-  <input type="submit" value="Submit"/>
-</form>
+<div class="wrap">
+  <div class="body">
+    <div class="wrapper">
+      <select name="dropdown">
+        <option *ngFor="let artist of artists" value="{{ artist.id }}" [(ngModel)]="idSelect">{{ artist.name }}</option>
+      </select>
+      <input type="text" name="description" placeholder="Write your description here" [(ngModel)]="description"/>
+      <button class="submit">Invia</button>
+    </div>
+  </div>
+</div>
