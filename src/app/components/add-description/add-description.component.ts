@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtistsService } from '../artist-module/artists.service';
+import { ArtistsService } from '../artist/artists.service';
 
 @Component({
   selector: 'add-description',

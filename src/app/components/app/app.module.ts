@@ -5,11 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { ArtistsListComponent } from '../artist-module/artists-list/artists-list.component';
-import { ArtistComponent } from '../artist-module/artist/artist.component';
 import { AddDescriptionComponent } from '../add-description/add-description.component';
-import { AddArtistComponent } from '../artist-module/add-artist/add-artist.component';
 import { FormsModule } from '@angular/forms';
+import { AddArtistComponent } from '../artist/add-artist/add-artist.component';
+import { ArtistsListComponent } from '../artist/artists-list/artists-list.component';
+import { ArtistComponent } from '../artist/artist/artist.component';
 
 @NgModule({
   declarations: [

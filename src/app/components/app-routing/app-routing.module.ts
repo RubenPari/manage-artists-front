@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddDescriptionComponent } from '../add-description/add-description.component';
-import { AddArtistComponent } from '../artist-module/add-artist/add-artist.component';
-import { ArtistsListComponent } from '../artist-module/artists-list/artists-list.component';
+import { ArtistsListComponent } from '../artist/artists-list/artists-list.component';
+import { AddArtistComponent } from '../artist/add-artist/add-artist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/artists-list', pathMatch: 'full' },
