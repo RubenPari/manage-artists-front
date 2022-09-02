@@ -24,8 +24,9 @@ export class ArtistsService {
     return this.http.delete(this.baseUrl + '/artists/' + id);
   }
 
-  setDescriptionForArtist(id: string, description: string): Observable<any> {
-    return this.http.post<any>(this.baseUrl + 'artists/set-description/' + id, {
+  setDescription(id: string, description: string): Observable<any> {
+    return this.http.post(this.baseUrl + '/artists/set-description', {
+      id: id,
       description: description,
     });
   }

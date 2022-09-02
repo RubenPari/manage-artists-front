@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistsService } from '../artist/artists.service';
+import Artist from '../../models/artist.model';
 
 @Component({
   selector: 'add-description',
@@ -9,28 +10,33 @@ import { ArtistsService } from '../artist/artists.service';
 export class AddDescriptionComponent implements OnInit {
   constructor(private artistsService: ArtistsService) {}
 
-  artists!: any[];
-  idSelect: string = '';
+  artists!: Artist[];
+  idSelected: string = '';
   description: string = '';
+  response: string = '';
 
   getAllArtists(): void {
     this.artistsService.getAll().subscribe((artists) => {
-      // foreach artist in artists, take id and name
-      this.artists = artists.map((artist) => {
-        return {
-          id: artist.id,
-          name: artist.name,
-        };
-      });
+      this.artists = artists;
     });
   }
 
-  setDescriptionForArtist(): void {
-    this.artistsService
-      .setDescriptionForArtist(this.idSelect, this.description)
-      .subscribe(() => {
-        console.log('Artist has been updated');
-      });
+  setDescription(): void {
+    console.log(this.description);
+    const isSet = this.artistsService.setDescription(
+      this.idSelected,
+      this.description
+    );
+
+    isSet.subscribe((response) => {
+      if (response.status == 'ok') {
+        console.log('Description added successfully');
+        this.response = 'Description added successfully';
+      } else {
+        console.log('Error to add description');
+        this.response = 'Error to add description';
+      }
+    });
   }
 
   ngOnInit(): void {

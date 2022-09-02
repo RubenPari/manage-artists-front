@@ -2,10 +2,24 @@
   <div class="body">
     <div class="wrapper">
       <select name="dropdown">
-        <option *ngFor="let artist of artists" value="{{ artist.id }}" [(ngModel)]="idSelect">{{ artist.name }}</option>
+        <option
+          *ngFor="let artist of artists"
+          value="{{ artist.id }}"
+          [ngValue]="idSelected"
+        >
+          {{ artist.name }}
+        </option>
       </select>
-      <input type="text" name="description" placeholder="Write your description here" [(ngModel)]="description"/>
-      <button class="submit">Invia</button>
+      <input
+        type="text"
+        name="description"
+        placeholder="Write your description here"
+        [(ngModel)]="description"
+      />
+      <button class="submit" (click)="setDescription()">Send</button>
     </div>
+  </div>
+  <div>
+    {{ response }}
   </div>
 </div>
