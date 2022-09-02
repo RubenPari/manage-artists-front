@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AddArtistComponent } from '../artist/add-artist/add-artist.component';
 import { ArtistsListComponent } from '../artist/artists-list/artists-list.component';
 import { ArtistComponent } from '../artist/artist/artist.component';
+import { DeleteArtistComponent } from '../artist/delete-artist/delete-artist.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ArtistComponent } from '../artist/artist/artist.component';
     ArtistComponent,
     ArtistsListComponent,
     AddArtistComponent,
+    DeleteArtistComponent,
     AddDescriptionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
