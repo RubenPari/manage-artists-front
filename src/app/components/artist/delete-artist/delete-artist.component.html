@@ -1,7 +1,7 @@
 <div class="wrap">
   <div class="body">
     <div class="wrapper">
-      <select name="dropdown" [(ngModel)]="nameSelected">
+      <select name="dropdown" class="select" [(ngModel)]="nameSelected">
         <option
           *ngFor="let artist of artists"
           value="{{ artist.name }}"

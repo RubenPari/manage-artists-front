@@ -1,7 +1,7 @@
 <div class="wrap">
   <div class="body">
     <div class="wrapper">
-      <select name="dropdown" [(ngModel)]="idSelected">
+      <select name="dropdown" class="select" [(ngModel)]="idSelected">
         <option
           *ngFor="let artist of artists"
           value="{{ artist.id }}"
@@ -12,10 +12,11 @@
       <input
         type="text"
         name="description"
+        class="input"
         placeholder="Write your description here"
         [(ngModel)]="description"
       />
-      <button class="submit" (click)="setDescription()">Send</button>
+      <button (click)="setDescription()">Send</button>
     </div>
   </div>
   <div>
