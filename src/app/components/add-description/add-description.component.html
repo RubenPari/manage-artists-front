@@ -1,11 +1,10 @@
 <div class="wrap">
   <div class="body">
     <div class="wrapper">
-      <select name="dropdown">
+      <select name="dropdown" [(ngModel)]="idSelected">
         <option
           *ngFor="let artist of artists"
           value="{{ artist.id }}"
-          [ngValue]="idSelected"
         >
           {{ artist.name }}
         </option>

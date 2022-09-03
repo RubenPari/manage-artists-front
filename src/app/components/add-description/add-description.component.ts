@@ -22,13 +22,12 @@ export class AddDescriptionComponent implements OnInit {
   }
 
   setDescription(): void {
-    console.log(this.description);
-    const isSet = this.artistsService.setDescription(
+    const added = this.artistsService.setDescription(
       this.idSelected,
       this.description
     );
 
-    isSet.subscribe((response) => {
+    added.subscribe((response) => {
       if (response.status == 'ok') {
         console.log('Description added successfully');
         this.response = 'Description added successfully';

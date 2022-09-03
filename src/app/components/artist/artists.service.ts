@@ -13,7 +13,7 @@ export class ArtistsService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Artist[]> {
-    return this.http.get<Array<Artist>>(this.baseUrl + 'artists/get-all');
+    return this.http.get<Array<Artist>>(this.baseUrl + '/artists/get-all');
   }
 
   add(name: string): Observable<any> {
