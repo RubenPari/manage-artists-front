@@ -20,8 +20,8 @@ export class ArtistsService {
     return this.http.post(this.baseUrl + '/artists/add?name=' + name, {});
   }
 
-  delete(id: number): Observable<any> {
-    return this.http.delete(this.baseUrl + '/artists/' + id);
+  delete(name: string): Observable<any> {
+    return this.http.delete(this.baseUrl + '/artists/remove?name=' + name);
   }
 
   setDescription(id: string, description: string): Observable<any> {

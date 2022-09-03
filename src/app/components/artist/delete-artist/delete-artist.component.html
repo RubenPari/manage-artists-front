@@ -1,5 +1,18 @@
 <div class="wrap">
   <div class="body">
-    <div class="wrapper">Delete component</div>
+    <div class="wrapper">
+      <select name="dropdown" [(ngModel)]="nameSelected">
+        <option
+          *ngFor="let artist of artists"
+          value="{{ artist.name }}"
+        >
+          {{ artist.name }}
+        </option>
+      </select>
+      <button class="submit" (click)="delete()">Send</button>
+    </div>
+  </div>
+  <div>
+    {{ response }}
   </div>
 </div>
