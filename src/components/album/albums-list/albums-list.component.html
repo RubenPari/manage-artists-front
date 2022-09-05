@@ -1,7 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-    hello
-    </div>
+<div class="album-cards">
+  <div class="album-card" *ngFor="let album in albums">
+    <album [album]="album"></album>
   </div>
 </div>

@@ -16,6 +16,11 @@ export class ArtistsService {
     return this.http.get<Array<Artist>>(this.baseUrl + '/artists/get-all');
   }
 
+  // TODO: to add endpoint to back-end
+  getArtistName(id: string): Observable<any> {
+    return this.http.get(this.baseUrl + '/artists/get-name?id=' + id);
+  }
+
   add(name: string): Observable<any> {
     return this.http.post(this.baseUrl + '/artists/add?name=' + name, {});
   }

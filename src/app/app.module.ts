@@ -12,6 +12,7 @@ import { ArtistsListComponent } from '../components/artist/artists-list/artists-
 import { ArtistComponent } from '../components/artist/artist/artist.component';
 import { DeleteArtistComponent } from '../components/artist/delete-artist/delete-artist.component';
 import { AlbumsListComponent } from '../components/album/albums-list/albums-list.component';
+import { AlbumComponent } from '../components/album/album/album.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AlbumsListComponent } from '../components/album/albums-list/albums-list
     DeleteArtistComponent,
     AddDescriptionComponent,
     AlbumsListComponent,
+    AlbumComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
