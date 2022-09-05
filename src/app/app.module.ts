@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { AddDescriptionComponent } from '../add-description/add-description.component';
+import { NavbarComponent } from '../components/navbar/navbar.component';
+import { AddDescriptionComponent } from '../components/add-description/add-description.component';
 import { FormsModule } from '@angular/forms';
-import { AddArtistComponent } from '../artist/add-artist/add-artist.component';
-import { ArtistsListComponent } from '../artist/artists-list/artists-list.component';
-import { ArtistComponent } from '../artist/artist/artist.component';
-import { DeleteArtistComponent } from '../artist/delete-artist/delete-artist.component';
+import { AddArtistComponent } from '../components/artist/add-artist/add-artist.component';
+import { ArtistsListComponent } from '../components/artist/artists-list/artists-list.component';
+import { ArtistComponent } from '../components/artist/artist/artist.component';
+import { DeleteArtistComponent } from '../components/artist/delete-artist/delete-artist.component';
 
 @NgModule({
   declarations: [
