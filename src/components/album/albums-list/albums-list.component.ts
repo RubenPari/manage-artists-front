@@ -9,7 +9,7 @@ import {AlbumService} from "../album.service";
   styleUrls: ['./albums-list.component.scss'],
 })
 export class AlbumsListComponent implements OnInit {
-  nameArtist: string = '';
+  idArtist: string = '';
   @Input() albums!: Album[];
 
   constructor(
@@ -18,14 +18,14 @@ export class AlbumsListComponent implements OnInit {
   ) {}
 
   getAllAlbums(): void {
-    this.albumService.getAll(this.nameArtist).subscribe((albums) => {
+    this.albumService.getAll(this.idArtist).subscribe((albums) => {
       this.albums = albums;
     });
   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.nameArtist = params['artist'];
+      this.idArtist = params['artist'];
     });
     this.getAllAlbums();
   }

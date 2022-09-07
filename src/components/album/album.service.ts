@@ -12,10 +12,9 @@ export class AlbumService {
 
   constructor(private http: HttpClient) {}
 
-  // TODO: to implement endpoint on backend
-  getAll(nameArtist: string): Observable<Album[]> {
+  getAll(idArtist: string): Observable<Album[]> {
     return this.http.get<Array<Album>>(
-      this.baseUrl + '/albums/get-all?name=' + nameArtist
+      this.baseUrl + '/albums/get-all?id_artist=' + idArtist
     );
   }
 }
