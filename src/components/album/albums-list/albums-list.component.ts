@@ -25,7 +25,7 @@ export class AlbumsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.idArtist = params['artist'];
+      this.idArtist = params['id_artist'];
     });
     this.getAllAlbums();
   }

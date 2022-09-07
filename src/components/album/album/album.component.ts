@@ -14,8 +14,8 @@ export class AlbumComponent implements OnInit {
   constructor(private artistService: ArtistsService) {}
 
   getArtistName(): void {
-    this.artistService.getArtistName(this.album.artistId).subscribe((name) => {
-      this.artist = name;
+    this.artistService.getArtistName(this.album.artistId).subscribe((response) => {
+      this.artist = response.name;
     });
   }
 
