@@ -110,15 +110,21 @@ img {
 .vinyl-info {
   display: block;
   width: 50%;
-  margin-top: 40px;
 
   .vinyl-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 30px;
+    font-size: 50px;
+    margin-bottom: -5px;
+  }
+
+  .vinyl-artist {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #7f818e;
+    margin-bottom: 35px;
   }
 
   .listen {
-    margin: 10px 0 10px 0;
     text-align: center;
     padding: 10px;
     background: white;
@@ -176,8 +182,8 @@ img {
   margin-top: 0;
   width: 60%;
 
-  .yellow {
-    background: #fbd46d;
+  .green {
+    background: #51e658;
   }
 
   &:hover {
