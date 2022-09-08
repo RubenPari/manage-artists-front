@@ -13,6 +13,7 @@ import { ArtistComponent } from '../components/artist/artist/artist.component';
 import { DeleteArtistComponent } from '../components/artist/delete-artist/delete-artist.component';
 import { AlbumsListComponent } from '../components/album/albums-list/albums-list.component';
 import { AlbumComponent } from '../components/album/album/album.component';
+import { AddAlbumComponent } from '../components/album/add-album/add-album.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AlbumComponent } from '../components/album/album/album.component';
     AddDescriptionComponent,
     AlbumsListComponent,
     AlbumComponent,
+    AddAlbumComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

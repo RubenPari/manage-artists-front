@@ -5,6 +5,7 @@ import { AddArtistComponent } from '../components/artist/add-artist/add-artist.c
 import { DeleteArtistComponent } from '../components/artist/delete-artist/delete-artist.component';
 import { AlbumsListComponent } from '../components/album/albums-list/albums-list.component';
 import { ArtistsListComponent } from '../components/artist/artists-list/artists-list.component';
+import { AddAlbumComponent } from '../components/album/add-album/add-album.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/artists-list', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'add-artist', component: AddArtistComponent },
   { path: 'delete-artist', component: DeleteArtistComponent },
   { path: 'add-description', component: AddDescriptionComponent },
+  { path: 'add-album', component: AddAlbumComponent },
 ];
 
 @NgModule({
