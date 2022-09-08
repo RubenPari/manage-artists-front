@@ -17,4 +17,8 @@ export class AlbumService {
       this.baseUrl + '/albums/get-all?id_artist=' + idArtist
     );
   }
+
+  add(title: string): Observable<any> {
+    return this.http.post<any>(this.baseUrl + '/albums/add?name=' + title, {});
+  }
 }
