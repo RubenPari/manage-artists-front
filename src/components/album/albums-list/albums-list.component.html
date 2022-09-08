@@ -1,9 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="album-cards">
-      <div class="album-card" *ngFor="let album of albums">
-        <album [album]="album"></album>
+    <div class="col-12">
+      <div class="album-cards">
+        <div class="album-card" *ngFor="let album of albums">
+          <album [album]="album"></album>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!-- FLOATING ACTION BUTTON -->
+<button class="floating-action-button">
+  <i class="fa-solid fa-plus"></i>
+</button>
+

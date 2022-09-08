@@ -1,0 +1,16 @@
+.album-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -16px;
+}
+
+.floating-action-button {
+  background-color: #0051ff;
+  border-radius: 50%;
+  bottom: 25px;
+  height: 70px;
+  position: absolute;
+  right: 25px;
+  width: 70px;
+}
