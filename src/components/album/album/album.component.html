@@ -8,5 +8,10 @@
     <a class="listen green" href="{{ album.uri }}">
       Listen now on Spotify
     </a>
+    <div class="delete-album">
+      <button class="delete-album-button" (click)="delete(album.id)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
   </div>
 </div>

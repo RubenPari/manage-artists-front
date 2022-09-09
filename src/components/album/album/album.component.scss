@@ -141,6 +141,26 @@ img {
   }
 }
 
+.delete-album {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #fbd46d;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.delete-album-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #fbd46d;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .divider {
   flex-grow: 1;
   padding: 0 30px 50px;

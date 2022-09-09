@@ -21,4 +21,8 @@ export class AlbumService {
   add(title: string): Observable<any> {
     return this.http.post<any>(this.baseUrl + '/albums/add?name=' + title, {});
   }
+
+  delete(id: string): Observable<any> {
+    return this.http.delete<any>(this.baseUrl + '/albums/delete?id=' + id);
+  }
 }
